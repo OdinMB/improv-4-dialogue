@@ -461,7 +461,7 @@ class RealtimeClient(RealtimeEventHandler):
                 }
             })
         except Exception as e:
-            logger.error(f"Tool call error: {json.dumps({"error": str(e)})}")
+            logger.error(f"Tool call error: {json.dumps({'error': str(e)})}")
             await self.realtime.send("conversation.item.create", {
                 "item": {
                     "type": "function_call_output",
