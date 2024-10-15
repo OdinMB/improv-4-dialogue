@@ -35,7 +35,7 @@ search_documents_def = {
 
 async def search_documents_handler(query, is_test=False):
     """
-    Semantic search over documents using FAISS vector store. Returns a list of relevant documents.
+    Semantic search over documents using FAISS vector store
     """
     print("Tool call: search_documents.", query)
     try:
@@ -43,7 +43,7 @@ async def search_documents_handler(query, is_test=False):
         current_dir = os.getcwd()
         
         # Construct the path to the FAISS index
-        faiss_index_path = os.path.join(current_dir, "..", "faiss_index")
+        faiss_index_path = os.path.join(current_dir, "faiss_index")
         
         print(f"Attempting to load FAISS index from: {faiss_index_path}")
         
